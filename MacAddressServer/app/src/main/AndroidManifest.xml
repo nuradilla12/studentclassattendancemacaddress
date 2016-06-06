@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="androidappdevworkshop.example.com.adilla.macaddressserver"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Interface.RegisterActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Interface.MainActivity"
+            android:label="@string/title_activity_main"
+            android:parentActivityName=".Interface.CreateAttendanceActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Interface.CreateAttendanceActivity"/>
+        </activity>
+        <activity
+            android:name=".Interface.AttendanceListActivity"
+            android:label="@string/title_activity_attendance_list"
+            android:parentActivityName=".Interface.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Interface.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".Interface.CreateAttendanceActivity"
+            android:label="@string/title_activity_create_attendance"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".Interface.SplashActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".Interface.FargmentActivity"
+            android:label="@string/title_activity_fargment"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".Interface.StudentListActivity"
+            android:label="@string/title_activity_student_list"
+            android:parentActivityName=".Interface.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Interface.MainActivity"/>
+        </activity>
+        <activity android:name=".Interface.InsertSubjectActivity">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="psm.com.adilla.macaddressclients.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/view">
+
+        <include
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            layout="@layout/toolbar_layout"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="attend now !"
+        android:onClick="attendClass"
+        android:id="@+id/buttonAttend"
+        android:textColor="#030101"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonAttend"
+        android:padding="15dp"
+        android:layout_below="@+id/view">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textViewIpAdd"
+            android:textColor="#ededed"
+            android:layout_marginBottom="46dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/editTextMACAdd"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewMatricNo"
+            android:textStyle="bold"
+            android:textColor="#4052b5"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="You are successful register this application and you are allow to enter register button. Your attendance will be record into the system."
+            android:id="@+id/textView3"
+            android:layout_below="@+id/editTextName"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:textColor="#262525"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView2"
+            android:text="Hello"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="23dp"
+            android:textColor="#262525"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Matric Number:"
+            android:id="@+id/textView"
+            android:layout_alignBaseline="@+id/textViewMatricNo"
+            android:layout_alignBottom="@+id/textViewMatricNo"
+            android:layout_alignParentStart="true"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextMACAdd"
+            android:textSize="11px"
+            android:layout_above="@+id/textViewIpAdd"
+            android:layout_alignParentEnd="true"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextName"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_marginStart="12dp"
+            android:textColor="#080808"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="psm.com.adilla.macaddressclients.RegisterActivity"
+    tools:showIn="@layout/activity_register">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/view">
+
+        <include
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            layout="@layout/toolbar_layout"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout2"
+        android:layout_below="@+id/view"
+        android:padding="15dp"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Example : B031310123"
+            android:id="@+id/textViewExample"
+            android:layout_marginStart="17dp"
+            android:textStyle="italic"
+            android:layout_below="@+id/text_input_MatricNo"
+            android:layout_alignParentStart="true"/>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_input_Name"
+            android:layout_below="@+id/text_input_MatricNo"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="32dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextName"
+                android:hint="Enter Your Full Name"
+                android:textColor="#030202"
+                android:textColorHint="#67a7f5"
+                android:layout_below="@+id/editTextMatricNo"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="52dp"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_input_MatricNo"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="21dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextMatricNo"
+                android:hint="Enter Matric No"
+                android:textColor="#030202"
+                android:textColorHint="#67a7f5"
+
+                android:layout_centerHorizontal="true"/>
+        </android.support.design.widget.TextInputLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/txtIPAdd"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_gravity="center"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/buttonSave"
+            android:onClick="registerStudent"
+            android:soundEffectsEnabled="true"
+            android:layout_marginBottom="61dp"
+            android:layout_above="@+id/linearLayout"
+            android:layout_toEndOf="@+id/txtIPAdd"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:id="@+id/buttonNext"
+            android:onClick="nextPage"
+            android:soundEffectsEnabled="true"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/txtIPAdd"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
